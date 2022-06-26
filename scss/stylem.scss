@@ -1,0 +1,542 @@
+@charset "utf-8";
+
+@media(max-width: 1650px){
+    #advance .advance_title{
+        padding: 294px 20% 90px 20%;
+    }
+    #factorium .factorium_container{
+        padding: 2% 5% 0 5%;
+    }
+}
+
+@media(max-width: 1440px){
+    #terrace{
+        position: relative;
+        background: #f0f1f2;
+        overflow: hidden;
+        .terrace_bg{
+            position: relative;
+            width: 100%; height: 100%;
+            padding: 10% 70px 10% 70px;
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            .box_all:hover{
+                .box_content .box_hover{
+                    transform:translateX(0);
+                    transition: all .6s;
+                }
+                .box_content{
+                    transform: translateY(-30px);
+                    box-shadow: 5px 5px 30px #999;
+                    transition: all .6s ease-out;
+                }
+            } //e: .box_all:hover
+            .box_all{
+                margin-bottom: 240px;
+                width: 595px;
+                height: 332px;
+                // padding-right:70px;
+                .box_content{
+                    position: relative;
+                    width: 100%; height: 100%;
+                    overflow: hidden;
+                } //e: .box_content
+                .box_content .box_hover{
+                    width: 220px;
+                    height: 332px;
+                    .box_inner{
+                        display: block;
+                        padding-top: 154px;
+                        div{width:84%; margin:0 auto;}
+                    }
+                    p:first-child{
+                        font-size: 22px;
+                    }
+                    p:not(:first-child){
+                        font-size: 12px;
+                    }
+                } //e:.box_hover
+            } //e:.box_all
+        } //e:.terrace_bg
+    } //e:#terrace
+} //e:width 1440px 이하
+
+@media(min-width: 1000px){
+    .mouse_scroll{
+        width: 100%;
+        position: absolute;
+        bottom: 6%;
+        display: flex;
+        overflow: hidden;
+        .move{
+            font-size: 26px;
+            font-weight: bold;
+            color: #1b1c1b;
+            white-space: nowrap;
+            padding: 0 25px;
+            cursor: default;
+            animation: textAnimate 5s linear infinite;
+            span{
+                padding-left: 50px;
+                color: #3989de;
+            } //e:.span
+        } //e:.move
+        @keyframes textAnimate{
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-100%); 
+            }
+        }
+    } //e: .mouse_scroll
+    .philo_wrap li{
+        width: calc(100% / 4);
+        position: relative;
+        transition: all .4s;
+        opacity: 0;
+    }
+    /* y축 stagger 애니메이션 */ 
+    .philo_wrap .img_stagger.animate{
+        animation: show .5s;
+        transition: all .4s;
+        animation-fill-mode: both;
+        animation-duration: 0.5;
+        animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
+    .philo_wrap .img_stagger.animate:nth-child(1){
+        animation-delay: 0.1s;
+    }
+    .philo_wrap .img_stagger.animate:nth-child(2){
+        animation-delay: 0.2s;
+    }
+    .philo_wrap .img_stagger.animate:nth-child(3){
+        animation-delay: 0.3s;
+    }
+    .philo_wrap .img_stagger.animate:nth-child(4){
+        animation-delay: 0.4s;
+    }
+    @keyframes show {
+        0%{
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        100%{
+            opacity: 1;
+            transform: traslateY(0);
+        }
+    }
+} //e: width 1000px 이상
+
+@media(max-width: 1000px){
+    header .category .category_wrap{
+        padding: 60px 0 0 5%;
+    }
+    header .category nav #nav li:last-child{
+        margin-right: 5%;
+    }
+    header .category .category_nav{
+        padding: 10% 0;
+    }
+    header .category .category_wrap.click_btn span{
+        left: 50px;
+    }
+    header .category .category_nav .category_menu a{
+        font-size: 66px;
+        -webkit-text-stroke: 1px #fff;
+    }
+    header .category .category_nav .sub_menu a{
+        font-size: 36px;
+    }
+    header .category .category_nav .category_menu a span{
+        width: 22px;
+        height: 2px;
+    }
+    .mouse_scroll{
+        display: none;
+    }
+    #main_section .main_wrap h2:first-child{
+        margin-bottom: 120px;
+    }
+    #main_section .main_wrap{
+        top: 47%;
+    }
+    #main_section{
+        background-size: 330px;
+    }
+    #main_section .main_wrap #main_title1{
+        margin-left: 0;
+        font-size: 55px; 
+    }
+    #main_section .main_wrap #main_title2{
+        font-size: 110px;
+    }
+    #main_section .mouse_scroll .move{
+        font-size: 24px;
+    }
+    .philo_wrap li{
+        width: 100%;
+        position: relative;
+        opacity: 1;
+        display: block;
+        width: 450px;
+        overflow: hidden;
+    }
+    .philo_wrap{
+        width: 100%;
+    }
+    #advance .advance_title{
+        padding: 254px 5% 90px 5%;
+    }
+    #advance .advance_icon .advance_wrap{
+        padding: 0 10%;
+        flex-wrap: wrap;
+    }
+    #advance .advance_icon .advance_wrap li:nth-child(1),
+    #advance .advance_icon .advance_wrap li:nth-child(2){
+        margin-bottom: 70px;
+    }
+    #factorium .factorium_container{
+        padding: 0 5%;
+    }
+    #factorium .factorium_container .wrapper .factorium_wrap1 .scroll_txt,
+    #factorium .factorium_container .wrapper .factorium_wrap2 .scroll_txt,
+    #factorium .factorium_container .wrapper .factorium_wrap3 .scroll_txt{
+        font-size: 0;
+        z-index: -1;
+    }
+    #factorium .factorium_container .title_m{
+        padding: 84px 0;
+    }
+    #factorium .factorium_container .title_m p{
+        font-size: 96px;
+        font-weight: bold;
+        color: #efefef;
+    }
+    #factorium .factorium_container p.img{
+        margin-bottom: 60px;
+        width: 720px;
+        height: 398px;
+    }
+    #factorium .factorium_container .wrapper .factorium_wrap1 .title_wrap,
+    #factorium .factorium_container .wrapper .factorium_wrap2 .title_wrap,
+    #factorium .factorium_container .wrapper .factorium_wrap3 .title_wrap{
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    #factorium .factorium_container .wrapper .factorium_wrap1,
+    #factorium .factorium_container .wrapper .factorium_wrap2,
+    #factorium .factorium_container .wrapper .factorium_wrap3{
+        position: static;
+    }
+    #factorium .factorium_container .title_wrap .txt_left{
+        margin-left: 0;
+    }
+    #factorium .factorium_container .title_wrap .txt_right{
+        margin-right: 0;
+    }
+    #factorium .factorium_container .wrapper .factorium_wrap1 .title_wrap .title,
+    #factorium .factorium_container .wrapper .factorium_wrap2 .title_wrap .title{
+        margin-bottom: 40px;
+    }
+    #terrace .sizem{
+        font-size: 0;
+        z-index: -1;
+    }
+    #terrace .title_m{
+        padding: 84px 5%;
+    }
+    #terrace .title_m p{
+        font-size: 96px;
+        font-weight: bold;
+        color: #c4c4c4;
+        font-family: 'Merriweather', serif;
+    }
+    #terrace .terrace_wrap{
+        position: static;
+        padding: 0 5%;
+        display: flex;
+        align-items: flex-start;
+    }
+    #media_section .media_title{
+        font-size: 96px;
+    }
+    #media_section .video_player #player{
+        padding: 0 5%;
+    }
+    footer .footer_wrap{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .footer_inner{
+        margin-left: 0;
+    }
+    footer .bt_logo{
+        margin-bottom: 30px;
+        width: 104px; height: 66px;
+    }
+    footer .footer_inner .footer_menu ul{
+        justify-content: center;
+    }
+    footer .footer_inner .footer_info .info_txt,
+    footer .footer_inner .footer_info .page_adress,
+    footer .footer_inner .copyright{
+        padding-right: 0;
+        text-align: center;
+    }
+    footer .sns_group{
+        position: static;
+        padding-right: 0;
+    }
+    footer .footer_inner .copyright{
+        margin-bottom: 30px;
+    }
+    footer .sns_group .sns{
+        margin: 0 10px;
+    }
+} //e: width 1000px 이하
+
+@media(max-width: 760px){
+    header .category nav #nav{
+        display: block;
+        z-index: -1;
+    }
+    header .category nav #nav a{
+        font-size: 0;
+        z-index: -1;
+    }
+    header .category .category_wrap{
+        right: 0;
+        padding: 60px 5% 0 0;
+    }
+    header .category #logo{
+        left: 0;
+        transform: none;
+        padding-left: 5%;
+    }
+    #advance .advance_icon .advance_wrap{
+        padding: 0 20%;
+    }
+    #factorium .factorium_container .title_m{
+        padding: 200px 0 84px 0;
+    }
+    #factorium .factorium_container p.img{
+        width: 640px; height: 389px;
+    }
+    #terrace .terrace_wrap .box_all{
+        width: 594px; height: 330px;
+    }
+    #terrace .terrace_wrap .box_all .box_content .box_hover{
+        width: 230px; height: 330px;
+    }
+    #terrace .terrace_wrap .box_all .box_content .box_hover .box_inner{
+        padding-top: 150px;
+    }
+    #media_section{
+        position: relative;
+        top: 65%;
+        transform: translateY(-50%);
+    }
+} //e: width 760px 이하
+
+@media(max-width: 500px){
+    header .category #logo{
+        margin-top: 10px;
+        padding-left: 5%;
+    }
+    header .category #logo a{
+        width: 53px; height: 37px;
+    }
+    header .category .category_wrap{
+        margin-top: 10px;
+        padding-right: 5%;
+    }
+    header .category .category_nav{
+        padding: 40% 0;
+    }
+    header .category .category_wrap.click_btn span{
+        left: -25px;
+    }
+    header .category .category_nav .category_menu a{
+        font-size: 42px;
+        -webkit-text-stroke: 0.8px #fff;
+    }
+    header .category .category_nav .sub_menu a{
+        font-size: 26px;
+    }
+    header .category .category_nav .category_menu a span{
+        width: 18px;
+        height: 2px;
+    }
+    #main_section .main_wrap #main_title1{
+        font-size: 28px;
+        margin-left: 10%;
+    }
+    #main_section .main_wrap #main_title2{
+        font-size: 68px;
+    }
+    #main_section{
+        background-size: 230px;
+    }
+    #main_section .main_wrap h2:first-child{
+        margin-bottom: 90px;
+    }
+    #main_section .main_wrap{
+        top: 49%;
+    }
+    #philosophy .philo_wrap li:nth-child(1),
+    #philosophy .philo_wrap li:nth-child(2),
+    #philosophy .philo_wrap li:nth-child(3),
+    #philosophy .philo_wrap li:nth-child(4){
+        width: 300px; height: 676px;
+    }
+    #philosophy .philo_wrap li:hover:nth-child(1),
+    #philosophy .philo_wrap li:hover:nth-child(2),
+    #philosophy .philo_wrap li:hover:nth-child(3),
+    #philosophy .philo_wrap li:hover:nth-child(4){
+        width: 300px; height: 676px;
+    }
+    #philosophy .philo_wrap li .philo_title{
+        font-size: 18px;
+    }
+    #philosophy .philo_wrap li .philo_hover{
+        font-size: 16px;
+    }
+    #advance .advance_title{
+        padding: 175px 2% 90px 2%;
+    }
+    #advance .advance_title .title{
+        font-size: 28px;
+    }
+    #advance .advance_title .sub_title{
+        font-size: 16px;
+    }
+    #advance .advance_title .line::after{
+        width: 30px;
+    }
+    #advance .advance_title .content{
+        padding: 0 10%;
+        font-size: 14px;
+        line-height: 145%;
+    }
+    #advance .advance_icon .advance_wrap{
+        padding: 0 10%;
+    }
+    #advance .advance_icon .advance_wrap .icon img{
+        width: 80px; height: 80px;
+    } 
+    #advance .advance_icon .advance_wrap li .advance_txt{
+        font-size: 12px;
+    }
+    #advance .advance_icon .advance_wrap{
+        flex-wrap: wrap;
+    }
+    #factorium .factorium_container{
+        padding: 0 4%;
+    }
+    #factorium .factorium_container .title_m{
+        padding-top: 120px;
+    }
+    #factorium .factorium_container .title_m p{
+        font-size: 54px;
+    }
+    #factorium .factorium_container .wrapper .factorium_wrap1{
+        padding-top: 0;
+    }
+    #factorium .factorium_container p.img{
+        width: 462px; height: 261px;
+    }
+    #factorium .factorium_container .wrapper .factorium_wrap1 .title_wrap .title,
+    #factorium .factorium_container .wrapper .factorium_wrap2 .title_wrap .title,
+    #factorium .factorium_container .wrapper .factorium_wrap3 .title_wrap .title{
+        font-size: 22px;
+    }
+    #factorium .factorium_container .wrapper .factorium_wrap1 .title_wrap .sub_title,
+    #factorium .factorium_container .wrapper .factorium_wrap2 .title_wrap .sub_title,
+    #factorium .factorium_container .wrapper .factorium_wrap3 .title_wrap .sub_title{
+        font-size: 14px;
+        line-height: 145%;
+        padding: 0 16%;
+    }
+    #terrace .title_m{
+        padding: 84px 4%;
+    }
+    #terrace .title_m p{
+        font-size: 54px;
+    }
+    #terrace .terrace_wrap .box_all{
+        width: 400px; height: 222px;
+    }
+    #terrace .terrace_wrap .box_all{
+        padding-right: 40px;
+    }
+    #terrace .terrace_wrap .box_all .box_content .box_hover{
+        width: 0; height: 0;
+    }
+    #terrace .terrace_wrap .box_all .box_content .box_hover .box_inner{
+        display: none;
+    }
+    #terrace .terrace_wrap .box_all:hover .box_content{
+        box-shadow: none;
+        transform: none;
+        transition: none;
+    }
+    #terrace .terrace_wrap .box_all .box_content{
+        overflow: visible;
+        position: relative;
+        display: flex;
+    }
+    #terrace .terrace_wrap .box_all .box_content .inner_m{
+        position: absolute;
+        bottom: -50%;
+        background: #1b1c1b;
+        display: block;
+        width: 360px;
+        height: 130px;
+        z-index: 50;
+        p:first-child{
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+            padding: 4% 0 10px 0;
+        }
+        p{
+            font-size: 14px;
+            color: #9da0a0;
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: center;
+            line-height: 130%;
+        }
+    }
+    #terrace .terrace_wrap{
+        padding: 0 4%;
+    }
+    #media_section .media_title span{
+        font-size: 54px;
+    }
+    #media_section{
+        position: relative;
+        top: 70%;
+        transform: translateY(-50%);
+    }
+    #media_section .video_player #player{
+        padding: 0 4%;
+    }
+    footer .bt_logo{
+        background-size: 72px;
+    }
+} //e: width 500px 이하
+
+@media(max-width: 400px){
+    #factorium .factorium_container p.img{
+        width: 360px; height: 195px;
+    }
+    #terrace .terrace_wrap .box_all{
+        width: 370px; height: 206px;
+    }
+    #terrace .terrace_wrap .box_all .box_content .inner_m{
+        width: 330px;
+    }
+} //e: width 400px 이하
